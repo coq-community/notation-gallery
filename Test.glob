@@ -1,5 +1,0 @@
-DIGEST acc718794b8bb5af8bfffa5dd3e8b038
-FTest
-R78:81 Coq.Init.Peano <> plus abbrev
-not 62:62 <> :::x_'`plus'_x
-R112:118 Test <> :::x_'`plus'_x not
