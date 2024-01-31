@@ -1,0 +1,43 @@
+name: Docker CI
+on:
+  push:
+    branches:
+      - main
+  pull_request:
+    branches:
+      - '**'
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: coq-community/docker-coq-action@v1
+        with:
+          coq_version: ${{ matrix.coq }}
+          custom_script: |
+            startGroup "Workaround permission issue"
+              sudo chmod -R a=u .
+            endGroup
+            startGroup "Build project"
+              make all
+            endGroup
+    strategy:
+      fail-fast: false
+      matrix:
+        coq:
+          - 'dev'
+          - '8.18'
+          - '8.17'
+          - '8.16'
+          - '8.15'
+          - '8.14'
+          - '8.13'
+          - '8.12'
+          - '8.11'
+          - '8.10'
+          - '8.9'
+          - '8.8'
+          - '8.7'
+          - '8.6'
+          - '8.5'
+          - '8.4'
