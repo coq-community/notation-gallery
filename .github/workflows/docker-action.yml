@@ -18,6 +18,10 @@ jobs:
             startGroup "Workaround permission issue"
               sudo chmod -R a=u .
             endGroup
+            startGroup "Install dependencies"
+              opam update -y
+              opam install -y coq-equations
+            endGroup
             startGroup "Build project"
               make all
             endGroup
