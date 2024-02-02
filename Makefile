@@ -8,3 +8,5 @@ all: $(VOFILES)
 clean:
 	rm *.vo *.vok *.vos *.glob
 
+install:
+	@echo Nothing to install.

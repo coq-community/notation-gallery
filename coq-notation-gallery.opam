@@ -1,0 +1,32 @@
+# This file was generated from `meta.yml`, please do not edit manually.
+# Follow the instructions on https://github.com/coq-community/templates to regenerate.
+
+opam-version: "2.0"
+maintainer: "Yishuai Li <liyishuai.lys@alibaba-inc.com>"
+version: "dev"
+
+homepage: "https://github.com/coq-community/notation-gallery"
+dev-repo: "git+https://github.com/coq-community/notation-gallery.git"
+bug-reports: "https://github.com/coq-community/notation-gallery/issues"
+license: "MIT"
+
+synopsis: "Best practices for using notations and custom entries"
+description: """
+A repository of "worked examples" showing best practices for using Coq notations and custom grammars.
+
+Contributions welcome!  Please package them as single files illustrating either individual notation tricks or whole grammars, with enough documentation that others can understand what you've done.
+"""
+
+build: [make "-j%{jobs}%"]
+install: [make "install"]
+depends: [
+  "coq" { >= "8.11" }
+  "coq-equations" 
+]
+
+tags: [
+  "logpath:"
+]
+authors: [
+  "Benjamin C. Pierce"
+]

@@ -1,0 +1,51 @@
+fullname: Coq Notation Gallery
+shortname: notation-gallery
+branch: main
+organization: coq-community
+action: true
+community: true
+synopsis: Best practices for using notations and custom entries
+description: >
+  A repository of "worked examples" showing best practices for using Coq
+  notations and custom grammars.
+
+
+  Contributions welcome!  Please package them as single files illustrating
+  either individual notation tricks or whole grammars, with enough documentation
+  that others can understand what you've done.
+authors:
+  - name: Benjamin C. Pierce
+    initial: true
+maintainers:
+  - name: Benjamin C. Pierce
+    nickname: bcpierce00
+  - name: Yishuai Li
+    nickname: liyishuai
+license:
+  fullname: MIT License
+  identifier: MIT
+supported_coq_versions:
+  text: 8.11 or later
+  opam: '{ >= "8.11" }'
+dependencies:
+  - description: '[Equations](https://mattam82.github.io/Coq-Equations)'
+    opam:
+      name: coq-equations
+build: |
+  ## Building instructions
+  ``` shell
+  git clone https://github.com/coq-community/notation-gallery.git
+  cd notation-gallery
+  make   # or make -j <number-of-cores-on-your-machine>
+  ```
+opam-file-maintainer: Yishuai Li <liyishuai.lys@alibaba-inc.com>
+tested_coq_opam_versions:
+  - version: dev
+  - version: '8.18'
+  - version: '8.17'
+  - version: '8.16'
+  - version: '8.15'
+  - version: '8.14'
+  - version: '8.13'
+  - version: '8.12'
+  - version: '8.11'
