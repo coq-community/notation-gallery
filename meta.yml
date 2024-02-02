@@ -32,7 +32,7 @@ dependencies:
     opam:
       name: coq-equations
 build: |
-  ## Building and installation instructions
+  ## Building instructions
   ``` shell
   git clone https://github.com/coq-community/notation-gallery.git
   cd notation-gallery
